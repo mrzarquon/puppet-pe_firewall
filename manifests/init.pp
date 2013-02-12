@@ -31,6 +31,9 @@ class pe_firewall {
       firewall { '110 mcollective allow all':
         dport  => '61613'
       }
+      firewall { '110 ssh allow all':
+        dport => '22'
+      }
     }
   }
 }
