@@ -25,14 +25,14 @@ class pe_firewall {
       firewall { '110 puppetmaster allow all':
         dport  => '8140',
       }
-      firewall { '110 dashboard allow all':
+      firewall { '110 dashboard allow some subnets':
         dport  => '443',
         source => ['74.85.255.0/24', '75.150.34.0/24', '127.0.0.1/24'],
       }
       firewall { '110 mcollective allow all':
         dport  => '61613'
       }
-      firewall { '110 ssh allow all':
+      firewall { '110 ssh allow some subnets':
         dport  => '22',
         source => ['74.85.255.0/24', '75.150.34.0/24'],
       }
