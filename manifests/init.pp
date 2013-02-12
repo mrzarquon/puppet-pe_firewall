@@ -27,14 +27,14 @@ class pe_firewall {
       }
       firewall { '110 dashboard allow all':
         dport  => '443',
-        source => ['74.85.255.0/24'],
+        source => ['74.85.255.0/24', '75.150.34.0/24', '127.0.0.1/24'],
       }
       firewall { '110 mcollective allow all':
         dport  => '61613'
       }
       firewall { '110 ssh allow all':
         dport  => '22',
-        source => ['74.85.255.0/24'],
+        source => ['74.85.255.0/24', '75.150.34.0/24'],
       }
     }
   }
